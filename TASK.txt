@@ -1,0 +1,70 @@
+============================================================
+  FocusTimer — Analytics Module
+============================================================
+
+You have a FocusTimer app's data layer: a FocusSession
+model and a FocusRepository containing session history.
+
+------------------------------------------------------------
+TASK
+------------------------------------------------------------
+
+Design and implement a testable analytics module.
+
+The product team wants users to understand their focus
+habits. Areas of interest:
+
+  - Focus streaks (consecutive days with sessions)
+  - Periodic summary (e.g., weekly totals)
+  - Productivity patterns (when users focus most)
+
+Start by reading FocusRepository.swift — it contains the
+session data you'll be working with.
+
+Then create your analytics module under:
+  Sources/FocusTimerAnalytics/Analytics/
+
+You decide the API, structure, and scope.
+Write tests to verify your implementation under:
+  Tests/FocusTimerAnalyticsTests/
+
+  Run tests:  swift test
+
+------------------------------------------------------------
+SUGGESTED FLOW
+------------------------------------------------------------
+
+  1. Read the existing code (FocusSession + FocusRepository)
+  2. Create your analytics class/functions
+  3. Write tests to verify correctness
+  4. Iterate: run tests, fix, improve
+
+You don't need to modify the existing code.
+You don't need to finish everything — scope management
+is part of the exercise.
+
+------------------------------------------------------------
+RULES
+------------------------------------------------------------
+
+- You MUST use AI coding tools during this session
+- Think aloud as you work
+
+------------------------------------------------------------
+PROJECT STRUCTURE
+------------------------------------------------------------
+
+Sources/FocusTimerAnalytics/
+├── Model/
+│   └── FocusSession.swift        (data model, read-only)
+├── Repository/
+│   └── FocusRepository.swift     (data source — start here)
+└── Analytics/
+    └── (your code goes here)
+
+Tests/FocusTimerAnalyticsTests/
+└── (your tests go here)
+
+------------------------------------------------------------
+TIME: ~35 minutes
+------------------------------------------------------------

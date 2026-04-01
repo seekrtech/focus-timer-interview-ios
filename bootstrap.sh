@@ -23,6 +23,8 @@ sudo apt-get install -y -qq \
     libncurses6 \
     libz3-dev \
     libsqlite3-dev \
+    gcc \
+    libstdc++-12-dev \
     > /dev/null 2>&1
 
 if [ -x "${SWIFT_DIR}/usr/bin/swift" ]; then

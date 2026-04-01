@@ -1,0 +1,78 @@
+============================================================
+  连接你的 AI 工具到 Codespace
+  Connect Your AI Tools to this Codespace
+============================================================
+
+这个 Codespace 已经预装了 GitHub Copilot。
+你也可以连接自己习惯的 AI 工具。
+
+This Codespace has GitHub Copilot pre-installed.
+You may also connect your preferred AI tools.
+
+------------------------------------------------------------
+方式一：VS Code / Cursor 远程连接
+Option 1: VS Code / Cursor Remote
+------------------------------------------------------------
+
+  1. 打开本地的 VS Code 或 Cursor
+     Open VS Code or Cursor locally
+
+  2. 安装 GitHub Codespaces 插件
+     Install the GitHub Codespaces extension
+
+  3. Remote Explorer > 连接到此 Codespace
+     Remote Explorer > Connect to this Codespace
+
+  连接后，你本地的 AI 插件（Copilot, Cursor 等）
+  可以直接操作 Codespace 里的代码。
+
+  Once connected, your local AI extensions (Copilot,
+  Cursor, etc.) work directly on the Codespace code.
+
+------------------------------------------------------------
+方式二：SSH 连接（命令行工具）
+Option 2: SSH (for CLI tools like Claude Code)
+------------------------------------------------------------
+
+  1. 在本地终端运行 / Run in your local terminal:
+
+     gh codespace ssh
+
+  2. 进入项目目录 / Navigate to project:
+
+     cd /workspaces/interview-project-ios
+
+  3. 加载环境 / Load environment:
+
+     source /workspace/.interview-env
+
+  4. 验证 / Verify:
+
+     swift --version
+     swift test
+
+  5. 启动你的 CLI 工具 / Start your CLI tool:
+
+     claude       # Claude Code
+     codex        # OpenAI Codex
+     gemini       # Gemini CLI
+
+------------------------------------------------------------
+方式三：浏览器终端
+Option 3: Browser Terminal
+------------------------------------------------------------
+
+  如果你安装了 CLI 工具（运行过 setup-ai-tools.sh），
+  可以直接在浏览器的终端中使用。
+
+  If you ran setup-ai-tools.sh, CLI tools are available
+  directly in the browser terminal.
+
+------------------------------------------------------------
+快速验证 / Quick Verification
+------------------------------------------------------------
+
+  swift build          # 构建项目 / Build project
+  swift test           # 运行测试 / Run tests
+
+============================================================

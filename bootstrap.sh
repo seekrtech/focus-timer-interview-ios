@@ -24,6 +24,7 @@ else
         libxml2-dev \
         libncurses6 \
         libz3-dev \
+        libsqlite3-dev \
         > /dev/null 2>&1
 
     curl -fsSL "${SWIFT_URL}" | tar xz -C /workspace

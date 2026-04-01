@@ -9,24 +9,25 @@ SWIFT_VERSION="6.1-RELEASE"
 SWIFT_URL="https://download.swift.org/swift-6.1-release/ubuntu2404/swift-6.1-RELEASE/swift-6.1-RELEASE-ubuntu24.04.tar.gz"
 
 # --- 1. Install Swift 6.1 ---
+
+# Install system dependencies needed by Swift on Linux
+echo "[1/2] Checking system dependencies..."
+sudo apt-get update -qq
+sudo apt-get install -y -qq \
+    binutils \
+    git \
+    curl \
+    libcurl4-openssl-dev \
+    libxml2-dev \
+    libncurses6 \
+    libz3-dev \
+    libsqlite3-dev \
+    > /dev/null 2>&1
+
 if [ -x "${SWIFT_DIR}/usr/bin/swift" ]; then
-    echo "[1/2] Swift already installed, skipping."
+    echo "[1/2] Swift already installed, skipping download."
 else
     echo "[1/2] Installing Swift 6.1..."
-
-    # Install system dependencies needed by Swift on Linux
-    sudo apt-get update -qq
-    sudo apt-get install -y -qq \
-        binutils \
-        git \
-        curl \
-        libcurl4-openssl-dev \
-        libxml2-dev \
-        libncurses6 \
-        libz3-dev \
-        libsqlite3-dev \
-        > /dev/null 2>&1
-
     curl -fsSL "${SWIFT_URL}" | tar xz -C /workspace
     mv "/workspace/swift-${SWIFT_VERSION}-ubuntu24.04" "${SWIFT_DIR}"
     echo "Swift installed to ${SWIFT_DIR}"
